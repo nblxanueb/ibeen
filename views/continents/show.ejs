@@ -1,0 +1,24 @@
+<!-- /cities/:id , memories by city -> city -->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+
+      <h2 class="page-title"><%= continent.name %></h2>
+      <% memories.forEach(memory => { %>
+        <div class="memory-wrapper">
+          <div class="trip-name">
+            <br><br><%= memory.city %>, <%= memory.country %> / <%= memory.date_visited %>
+          </div>
+          <div class="memory-actions">
+            <a href="/memories/<%= memory.id %>">view trip</a>
+          </div>
+        </div>
+      <% }) %>
+  </body>
+</html>

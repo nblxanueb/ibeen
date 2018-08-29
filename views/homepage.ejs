@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body class="homepage">
+    <div class="page-container">
+      <% include ./partials/header %>
+
+      <p>Welcome to iBeen, a place for all your memories from the places you have visited!</p>
+    </div>
+
+<div class="image-carousel">
+  <img class="mySlides" src="https://i.imgur.com/0C1MuA7.jpg" style="width:100%"/>
+  <img class="mySlides" src="https://i.imgur.com/YbsOxim.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/H59mwMx.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/gGhNghF.jpg" style="width: 100%">
+  <img class="mySlides" src="https://i.imgur.com/oJIKVwq.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/eY6HlkP.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/ZuYWWBd.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/125INpk.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/cXxrWkW.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/e94vV5G.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/zeDoR8o.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/DoKAS9U.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/H7VwtNT.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/w58ZNOj.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/YYfpFY1.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/vzsP5Z2.jpg" style="width:100%">
+  <img class="mySlides" src="https://i.imgur.com/0n8lAzl.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000);
+}
+</script>
+
+      <% include ./partials/footer %>
+
+
+  </body>
+</html>

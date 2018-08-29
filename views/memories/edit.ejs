@@ -1,0 +1,48 @@
+<!-- /memories/:id/edit , edit memory page -->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+
+      <h2 class="page-title">Edit Trip</h2>
+      <form class="new-item-form" method="POST" action="/memories/<%= memory.id %>?_method=PUT" style="color: #efedf5;">
+        <label>Country</label>
+        <textarea name="country"><%= memory.country %></textarea>
+        <label>City</label>
+        <textarea name="city"><%= memory.city %></textarea>
+
+        <label>Continent</label>
+        <select name="continent_id" required>
+          <option value="">Select a continent...</option>
+          <% continents.forEach( continent => { %>
+            <option value="<%= continent.id %>" <%=continent.id == memory.continent_id ? 'selected' : '' %>
+              >
+              <%= continent.name %>
+            </option>
+            <% }) %>
+        </select>
+        <label>Best memory</label>
+        <textarea name="best_memory"><%= memory.best_memory %></textarea>
+        <label>Activities</label>
+        <textarea name="activities"><%= memory.activities %></textarea>
+        <label>Accomodation</label>
+        <textarea name="accomodation"><%= memory.accomodation %></textarea>
+        <label>Image Link</label>
+        <textarea name="image_url"><%= memory.image_url %></textarea>
+        <label>Latitude Coordinates</label>
+        <textarea name="lat"><%= memory.lat %></textarea>
+        <label>Longitude Coordinates</label>
+        <textarea name="lng"><%= memory.lng %></textarea>
+        <label>Date visited</label>
+        <input type="date" name="date_visited"><%= memory.date_visited %>
+        <button type="submit" class="update">Update Trip</button>
+      </form>
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

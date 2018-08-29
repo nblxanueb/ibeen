@@ -1,0 +1,54 @@
+<!-- memories/:id specific memory view-->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+
+
+      <script>
+        const lat = `<%= memory.lat %>`;
+        const lng = `<%= memory.lng %>`;
+      </script>
+
+      <div class="memory-wrapper">
+        <div class="image-and-map">
+          <img src="<%=memory.image_url %>" class="image">
+          <div id="googleMap">
+        </div>
+        </div>
+
+        <br><br>
+        <div class="trip-description">
+          <h1 style="color: #efedf5; text-align: center; font-size: 1.5em"><%= memory.city %>, <%= memory.country %>
+          </h1>
+          <br><br>
+          <%= memory.date_visited %>
+          <br><br>
+          <%= memory.best_memory %>
+          <br><br>
+          Favorite activities: <%= memory.activities %>
+          <br>
+          <br>
+          Stayed at: <%= memory.accomodation %>
+        </div>
+
+        <div class="edit-delete">
+          <a href="/memories/<%= memory.id %>/edit" style="background: none; border: none"><img src="https://i.imgur.com/FW2OUdB.png" width="20px" alt="edit" title="edit"></a>
+          <form method="POST" action="/memories/<%= memory.id %>?_method=DELETE" class="delete-form">
+            <button type="submit" style="background: none; border: none;"><img src="https://i.imgur.com/X6sX4ZH.png" width="20px" alt="delete" title="delete"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeTdCRweKINV2rVaMeM8LSSFMewLhUAXI"></script>
+
+      <% include ../partials/footer %>
+  </body>
+</html>

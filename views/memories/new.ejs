@@ -1,0 +1,48 @@
+<!-- memories/new , create new memory -->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+
+      <h2 class="page-title">New trip</h2>
+      <form class="new-item-form" method="POST" action="/memories" style="color: #efedf5">
+
+        <label>Country</label>
+        <textarea name="country"></textarea>
+        <label>City</label>
+        <textarea name="city"></textarea>
+        <label>Continent</label>
+        <select name="continent_id" required>
+          <option value="">Select a continent</option>
+          <% continents.forEach( continent => { %>
+            <option value="<%= continent.id %>">
+              <%= continent.name %>
+            </option>
+            <% }) %>
+        </select>
+        <label>Best memory</label>
+        <textarea name="best_memory"></textarea>
+        <label>Activities</label>
+        <textarea name="activities"></textarea>
+        <label>Accomodation</label>
+        <textarea name="accomodation"></textarea>
+        <label>Image Link</label>
+        <textarea name="image_url"></textarea>
+        <label>Latitude Coordinates</label>
+        <textarea name="lat"></textarea>
+        <label>Longitude Coordinates</label>
+        <textarea name="lng"></textarea>
+        <label>Date visited</label>
+        <input type="date" name="date_visited">
+        <button type="submit" class="submit">Add trip</button>
+      </form>
+    </div>
+
+      <% include ../partials/footer %>
+  </body>
+</html>

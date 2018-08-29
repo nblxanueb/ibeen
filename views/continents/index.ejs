@@ -1,0 +1,19 @@
+<!-- /cities , memories by city tab -->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+
+      <h2 class="page-title">All Continents</h2>
+      <% continents.forEach(continent => { %>
+        <p><a href="/continents/<%= continent.id %>" class="continent-list"><%= continent.name %></a></p>
+      <% }) %>
+    </div>
+    <% include ../partials/footer %>
+  </body>
+</html>

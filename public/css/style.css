@@ -1,0 +1,224 @@
+body {
+  background-color: #985e6d;
+  font-family: "Roboto", sans-serif;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 75%;
+  font-size: 1rem;
+  margin: auto;
+  transform: translate(0px, 10px);
+}
+
+a {
+  color:#494e6b;
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+.logo {
+  width: 15%;
+  display: block;
+  margin: auto;
+  padding-bottom: 1%;
+}
+
+.image-carousel {
+  box-shadow: 1px 1px 2px black, 0 0 30px #192231;
+  margin: 0 auto;
+  width: 65%;
+}
+
+.mySlides {
+  width: 100%;
+}
+
+.page-container {
+  margin: 1.5rem auto 0;
+  max-width: 80%;
+}
+
+.all-trips-images {
+  padding-right: 2em;
+}
+
+.trips-wrapper {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  max-width: auto;
+}
+
+.trip-images {
+  border: 3px solid #494e6b;
+  width: 25em;
+  margin-bottom: 2%;
+}
+
+.continent-list {
+  font-size: 1.5em;
+  color: #efedf5;
+  line-height: 2em;
+  margin-left: 5%;
+}
+
+.scroll {
+  display: block;
+  margin: auto;
+  font-size: 20px;
+}
+
+.image-and-map {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.image {
+  height: 340px;
+  border: 2px solid #ededf5;
+  margin-right: 5%;
+}
+
+#googleMap {
+  width: 90%;
+  height: 100;
+}
+
+.trip-description {
+  color:#494e6b;
+  text-align: justify;
+}
+
+.website-title a {
+  text-decoration: none;
+  color: #fcfbfd;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #494e6b;
+}
+
+.edit-delete {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.trip-name {
+  color: #ededf5;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+hr {
+  border: 0.5px solid #494e6b;
+}
+
+.homepage p {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color:#494e6b;
+}
+
+.new-item-form {
+  display: grid;
+  max-width: 60%;
+  margin-left: 5%;
+}
+
+textarea, select, input {
+  line-height: 10px;
+  font-size: 12px;
+}
+
+
+.submit, .update {
+  background-color: #494e6b;
+  color: #ededf5;
+  width: 100px;
+  font-size: 14px;
+  line-height: 30px;
+  border: 1px solid #ededf5;
+  border-radius: 10px;
+}
+
+.new-item-form textarea,
+.new-item-form input,
+.new-item-form select {
+  margin-bottom: 1rem;
+}
+
+.new-item-form button {
+  grid-column: 2 / 3;
+}
+
+ul {
+  text-align: right;
+}
+
+li {
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+
+footer {
+  color: #ededf5;
+  display: block;
+  margin: 5%;
+  font-size: 12px;
+}
+
+.footer-link {
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  body {
+    margin: 1%;
+  }
+  .logo {
+    width: 60%;
+  }
+  nav {
+    font-size: 12px;
+    max-width: 100%;
+    margin-top: 2%;
+  }
+  .image-carousel {
+    width: 100%;
+  }
+  .trips-wrapper {
+    flex-direction: column;
+  }
+  .image-and-map {
+    flex-direction: column;
+  }
+  .image {
+    height: 200px;
+    width: 350px;
+    margin-left: 2%;
+    margin-bottom: 2%;
+  }
+  #googleMap {
+    height: 200px;
+    width: 350px;
+    margin-left: 2%;
+  }
+  .trip-description {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}

@@ -1,0 +1,26 @@
+<!-- all memories tab -->
+
+<!doctype html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <div class="page-container">
+      <% include ../partials/header %>
+      <h2 class="page-title">Your Trips</h2>
+      <div class="trips-wrapper">
+      <% memories.forEach(memory => { %>
+        <div class="all-trips-images">
+          <div class="trip-info">
+            <a href="/memories/<%= memory.id %>"><img src="<%=memory.image_url %>" class="trip-images"></a>
+          </div>
+          <div style="color: #fcfbfd"><%= memory.city %>, <%= memory.country %>
+          </div>
+          <br><br>
+        </div>
+      <% }) %>
+      </div>
+      <% include ../partials/footer %>
+  </body>
+</html>
