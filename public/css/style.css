@@ -20,16 +20,23 @@ a {
   text-decoration: none;
 }
 
-a :hover {
-  text-decoration: none;
-  color: yellow;
-}
-
 .logo {
   width: 15%;
   display: block;
   margin: auto;
   padding-bottom: 1%;
+}
+
+.welcome {
+  color: #494e6b;
+  display: block;
+  width: 55%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.mySlides {
+  width: 100%;
 }
 
 .image-carousel {
@@ -38,13 +45,9 @@ a :hover {
   width: 65%;
 }
 
-.mySlides {
-  width: 100%;
-}
-
 .page-container {
   margin: 1.5rem auto 0;
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .all-trips-images {
@@ -59,9 +62,13 @@ a :hover {
 }
 
 .trip-images {
-  border: 3px solid #494e6b;
+  border: 2px solid #ededf5;
   width: 25em;
   margin-bottom: 2%;
+}
+
+.city-country {
+  color: #ededf5;
 }
 
 .continent-list {
@@ -69,12 +76,6 @@ a :hover {
   color: #efedf5;
   line-height: 2em;
   margin-left: 5%;
-}
-
-.scroll {
-  display: block;
-  margin: auto;
-  font-size: 20px;
 }
 
 .image-and-map {
@@ -193,18 +194,30 @@ footer {
     width: 60%;
   }
   nav {
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100%;
     margin-top: 2%;
   }
+  .welcome {
+    width: 70%;
+    font-size: 12px;
+    text-align: center;
+  }
   .image-carousel {
-    width: 100%;
+    width: 80%;
+    margin-bottom: 70%;
   }
   .trips-wrapper {
     flex-direction: column;
   }
+  .all-trips-images{
+    padding-right: 0;
+  }
   .image-and-map {
     flex-direction: column;
+  }
+  .trip-images{
+    width: 20em;
   }
   .image {
     height: 200px;
