@@ -1,5 +1,5 @@
 body {
-  background-color: #985e6d;
+  background-color: #985e6dd7;
   font-family: "Roboto", sans-serif;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -216,7 +216,7 @@ footer {
   .image, #googleMap {
     height: 200px;
     width: 300px;
-    margin: auto;
+    /* margin: auto; */
   }
   .trip-description {
     margin-left: 2%;
