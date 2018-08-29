@@ -1,8 +1,8 @@
 body {
   background-color: #985e6d;
   font-family: "Roboto", sans-serif;
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 nav {
@@ -51,7 +51,7 @@ a {
 }
 
 .all-trips-images {
-  padding-right: 2em;
+  padding-right: 2rem;
 }
 
 .trips-wrapper {
@@ -72,9 +72,9 @@ a {
 }
 
 .continent-list {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #efedf5;
-  line-height: 2em;
+  line-height: 2rem;
   margin-left: 5%;
 }
 
@@ -119,8 +119,8 @@ a {
 
 .trip-name {
   color: #ededf5;
-  font-size: 1em;
-  margin-bottom: 0.5em;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 hr {
@@ -143,8 +143,8 @@ hr {
 textarea, select, input {
   line-height: 10px;
   font-size: 12px;
+  margin-bottom: 1rem;
 }
-
 
 .submit, .update {
   background-color: #494e6b;
@@ -154,12 +154,6 @@ textarea, select, input {
   line-height: 30px;
   border: 1px solid #ededf5;
   border-radius: 10px;
-}
-
-.new-item-form textarea,
-.new-item-form input,
-.new-item-form select {
-  margin-bottom: 1rem;
 }
 
 .new-item-form button {
@@ -199,8 +193,8 @@ footer {
     margin-top: 2%;
   }
   .welcome {
-    width: 70%;
-    font-size: 12px;
+    width: 80%;
+    font-size: 14px;
     text-align: center;
   }
   .image-carousel {
@@ -219,19 +213,16 @@ footer {
   .trip-images{
     width: 20em;
   }
-  .image {
+  .image, #googleMap {
     height: 200px;
-    width: 350px;
-    margin-left: 2%;
-    margin-bottom: 2%;
-  }
-  #googleMap {
-    height: 200px;
-    width: 350px;
-    margin-left: 2%;
+    width: 300px;
+    margin: auto;
   }
   .trip-description {
     margin-left: 2%;
     margin-right: 2%;
+  }
+  .new-item-form {
+    max-width: 100%;
   }
 }
